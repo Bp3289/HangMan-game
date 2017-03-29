@@ -10,3 +10,12 @@ form {
  text-align: center;
 }
 
+.input {
+	position: relative;
+
+}
+
+#guess {
+	width: 50px;
+	height: 30px;
+}
