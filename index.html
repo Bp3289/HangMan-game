@@ -11,10 +11,35 @@
 <h1 class="title">Hang Man!</h1>
 
 <div class="topstuff">
-<div class="hang-placeholder"></div>
+<div class="hang-placeholder">
 <div class="scaffolding-top"></div>
 <div class="scaffolding-left"></div>
 
+<div class="hang-area">
+	<div class="rope"></div>
+	</div>
+
+	<div class="base"></div>
+	</div>
+	<div class='word-box'>
+            <div class='word-display'>
+            </div>
+        </div>
+
+        <div class="bottom-stuff">
+        <div class='side-container'>
+        <div class='container-title'>Guess A Letter!</div>
+        <div class='input-area'>
+          <input id='letter-input' type='text' maxlength='1'/>
+        </div>
+      </div>
+    
+      <div class='side-container'>
+        <div class='container-title'>Guessed Letters</div>
+        <div id="wrong-letters" class='input-area'></div>
+      </div>
+    </div>
+	
 
 
 
@@ -22,11 +47,8 @@
 
 
 
-<div class="input">
-<form>
-<input id="guess" type="text" name="guess">
-</form>
-</div>
+
+
 
 
 <script src="app.js"></script>
