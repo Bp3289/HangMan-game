@@ -4,29 +4,6 @@
 	font-size: 80px;
 }
 
-.wrapper {
-	text-align: center;
-}
-
-form {
- text-align: center;
- height: 100px;
-}
-
-.input {
-	position: relative;
-
-}
-
-#guess {
-	width: 50px;
-	height: 30px;
-	margin-top: 400px;
-	position: relative;
-}
-
-.box{
-	width:100px;
-	height:100px;
-	color: blue;
+.topstuff {
+	height: 210px;
 }
