@@ -8,5 +8,10 @@ function game() {
 		guessed: 'already tried this letter loser, try again...',
 		validLetter: 'Please enter a letter from A-Z'
 	};
+
+	letterGuessed = lettersMatched = '';
+	numLettersMatched = 0;
+
+	currentWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 }
 
