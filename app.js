@@ -1,2 +1,4 @@
-
+function game() {
+	availableLetters = "abcdefghijklmnopqrstuvwxyz";
+}
 
