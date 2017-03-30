@@ -29,5 +29,8 @@ function game() {
 	guessInput.style.display = 'inline';
 	guessButton.style.display = 'inline';
 
+	letters = document.getElementById('letters');
+	letters.innerHTML = '<li class="current-word">Current word:</li>';
+
 	}
 
