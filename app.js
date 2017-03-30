@@ -40,3 +40,15 @@ function game() {
 
 	}
 
+	function gameOver(win) {
+		if (win) {
+			outcome.innerHTML = messages.win;
+			outcome.classList.add('win');
+		} else {
+			outcome.innerHTML = messages.lose;
+			outcome.classList.add('error');
+		}
+		guessInput.style.display = guessButton.style.display = 'none';
+		guessInput = '';
+	}
+
