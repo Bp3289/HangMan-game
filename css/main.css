@@ -14,4 +14,11 @@ h1 {
 	color: white;
 }
 
+.currentWord {
+	list-style: none;
+}
 
+.outcome {
+	opacity: 0;
+	transition: opacity 1s ease;
+}
