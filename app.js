@@ -13,5 +13,21 @@ function game() {
 	numLettersMatched = 0;
 
 	currentWord = wordBank[Math.floor(Math.random() * wordBank.length)];
-}
+
+
+	outcome = document.getElementById('outcome');
+	man = document.getElementById('man');
+	guessInput = document.getElementById('letter');
+
+	man.innerHTML = 'You have ' + lives + ' miserable lives remaining';
+	outcome.innerHTML = '';
+
+	document.getElementById('letter').value = '';
+
+
+	guessButton = document.getElementById('wrong');
+	guessInput.style.display = 'inline';
+	guessButton.style.display = 'inline';
+
+	}
 
