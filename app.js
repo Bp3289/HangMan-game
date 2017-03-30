@@ -1,3 +1,7 @@
+(function () {
+    "use strict";
+    var availableLetters, wordBank, guessInput, guess, guessButton, lettersGuessed, lettersMatched, outcome, molly, letters, lives, currentWord, numLettersMatched, messages;
+
 function game() {
 	availableLetters = "abcdefghijklmnopqrstuvwxyz";
 	lives = 6;
@@ -16,10 +20,10 @@ function game() {
 
 
 	outcome = document.getElementById('outcome');
-	lives = document.getElementById('lives');
+	molly = document.getElementById('molly');
 	guessInput = document.getElementById('letter');
 
-	 lives.innerHTML = 'You have ' + lives + ' lives remaining';
+	 molly.innerHTML = 'You have ' + molly + ' lives remaining';
 	 outcome.innerHTML = ' ';
 
 	document.getElementById('letter').value = '';
@@ -85,11 +89,30 @@ function game() {
         				}
         			}
 
+        			lettersMatched += guess;
+        			if (numLettersMatched === currentWord.length) {
+        				gameOver(true);
+        			}
+
+        			else {
+        				letterGuessed += guess;
+        				lives--;
+        				molly.innerHTML = 'You have ' + lives + ' miserable lives remaining';
+        				if (lives === 0) gameOver();
+        			}
         		}
 
+        		else {
+        			outcome.classList.add('error');
+        			outcome.innerHTML = messages.validLetter;
+        		}
+        		return false;
         	}
 
         }
+    };
 
-	};
+	}());
+
+
 
