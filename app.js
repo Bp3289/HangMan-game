@@ -32,5 +32,11 @@ function game() {
 	letters = document.getElementById('letters');
 	letters.innerHTML = '<li class="current-word">Current word:</li>';
 
+	var letter, i;
+	for (i = 0; i < currentWord.length; i++) {
+		letter = '<li class="letter letter' + currentWord.charAt(i).toUpperCase() + '">' + currentWord.charAt(i).toUpperCase() + '</li>';
+            letters.insertAdjacentHTML('beforeend', letter);
+        }
+
 	}
 
