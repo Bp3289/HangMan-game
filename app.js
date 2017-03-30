@@ -56,3 +56,26 @@ function game() {
 
 	document.getElementById('restart').onclick = game;
 
+	guessInput.onclick = function () {
+		this.value = '';
+	};
+
+
+	document.getElementById('main').onsubmit = function (e) {
+		 if (e.preventDefault) e.preventDefault();
+        outcome.innerHTML = '';
+        outcome.classList.remove('error', 'warning');
+        guess = guessInput.value;
+
+        if (guess) {
+        	if (availableLetters.indexOf(guess) > -1) {
+
+        		if((lettersMatched && numLettersMatched.indexOf(guess) > -1) || (letterGuessed && letterGuessed.indexOf(guess) > -1)) {
+        			outcome.innerHTML = '"' + guess.toUpperCase() + '"' + messages.guessed;
+                    output.classList.add("warning");
+        		}
+        	}
+        }
+
+	};
+
