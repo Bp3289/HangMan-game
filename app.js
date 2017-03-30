@@ -16,11 +16,11 @@ function game() {
 
 
 	outcome = document.getElementById('outcome');
-	man = document.getElementById('man');
+	lives = document.getElementById('lives');
 	guessInput = document.getElementById('letter');
 
-	man.innerHTML = 'You have ' + lives + ' miserable lives remaining';
-	outcome.innerHTML = '';
+	 lives.innerHTML = 'You have ' + lives + ' lives remaining';
+	 outcome.innerHTML = ' ';
 
 	document.getElementById('letter').value = '';
 
@@ -51,4 +51,8 @@ function game() {
 		guessInput.style.display = guessButton.style.display = 'none';
 		guessInput = '';
 	}
+
+	window.onload = game();
+
+	document.getElementById('restart').onclick = game;
 
