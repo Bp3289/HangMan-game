@@ -74,7 +74,21 @@ function game() {
         			outcome.innerHTML = '"' + guess.toUpperCase() + '"' + messages.guessed;
                     output.classList.add("warning");
         		}
+
+        		else if (currentWord.indexOf(guess) > -1) {
+        			var lettersToAppear;
+        			lettersToAppear = document.querySelectorAll(".letter" + guess.toUpperCase());
+        			
+        			for ( var j = 0; i < lettersToAppear.length; j++) {
+        				if (currentWord.charAt(j) === guess) {
+        					numLettersMatched +=1;
+        				}
+        			}
+
+        		}
+
         	}
+
         }
 
 	};
