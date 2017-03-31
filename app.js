@@ -10,7 +10,7 @@
         messages = {
             win: 'You win (probably cheated)!',
             lose: 'You lose which seems about right',
-            guessed: 'already tried this letter loser, try again...',
+            guessed: '.....already tried this letter loser, try again...',
             validLetter: 'Please enter a letter from A-Z'
         };
         /* end game options */
