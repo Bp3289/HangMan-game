@@ -38,7 +38,7 @@
 
         /* set up display of letters in current word */
         letters = document.getElementById("letters");
-        letters.innerHTML = '<li class="current-word">Current word:</li>';
+        letters.innerHTML = '<class="current-word">Current word:</li>';
 
         var letter, i;
         for (i = 0; i < currentWord.length; i++) {

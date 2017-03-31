@@ -4,6 +4,11 @@ h1 {
 	font-size: 80px;
 }
 
+#main {
+	text-align: center;
+}
+
+
 .letter {
 	display: inline-block;
 	list-style: none;
@@ -12,6 +17,14 @@ h1 {
 	border-bottom: 1px solid black;
 	text-align: center;
 	color: white;
+}
+
+#letters {
+	text-align: center;
+}
+
+#molly {
+	text-align: center;
 }
 
 .currentWord {
