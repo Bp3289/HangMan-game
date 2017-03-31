@@ -3,7 +3,7 @@
     var availableLetters, wordBank, guessInput, guess, guessButton, lettersGuessed, lettersMatched, outcome, molly, letters, lives, currentWord, numLettersMatched, messages;
 
     function game() {
-        /* start config options */
+        /* start game options */
         availableLetters = "abcdefghijklmnopqrstuvwxyz";
         lives = 6;
         wordBank = ["baseball", "ginandtonic", "ihopeyoulose", "beer", "generalassembly"];
@@ -13,7 +13,7 @@
             guessed: 'already tried this letter loser, try again...',
             validLetter: 'Please enter a letter from A-Z'
         };
-        /* end config options */
+        /* end game options */
 
         lettersGuessed = lettersMatched = '';
         numLettersMatched = 0;
@@ -21,7 +21,7 @@
         /* choose a word */
         currentWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 
-        /* make #man and #output blank, create vars for later access */
+        /* make #molly and #outcome blank, create vars for later access */
         outcome = document.getElementById("outcome");
         molly = document.getElementById("molly");
         guessInput = document.getElementById("letter");
@@ -60,7 +60,7 @@
         guessInput.value = '';
     }
 
-    /* Start game - should ideally check for existing functions attached to window.onload */
+    /* Start game on window.onload */
     window.onload = game();
 
     /* buttons */
@@ -71,7 +71,7 @@
         this.value = '';
     };
 
-    /* main guess function when user clicks #guess */
+    /* main guess function */
     document.getElementById('main').onsubmit = function (e) {
         if (e.preventDefault) e.preventDefault();
         outcome.innerHTML = '';
@@ -80,7 +80,7 @@
 
         /* does guess have a value? if yes continue, if no, error */
         if (guess) {
-            /* is guess a valid letter? if so carry on, else error */
+            /* is guess a valid letter? if so go on else error */
             if (availableLetters.indexOf(guess) > -1) {
                 /* has it been guessed (missed or matched) already? if so, abandon & add notice */
                 if ((lettersMatched && lettersMatched.indexOf(guess) > -1) || (lettersGuessed && lettersGuessed.indexOf(guess) > -1)) {
