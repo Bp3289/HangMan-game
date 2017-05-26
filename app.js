@@ -47,6 +47,7 @@
         }
     }
 
+    /*Determines when a user wins*/
     function gameOver(win) {
         if (win) {
             outcome.innerHTML = messages.win;
